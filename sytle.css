@@ -28,3 +28,9 @@ form{
 .button{
     line-height: 2;
 }
+
+#resultado {
+    margin-top: 20px;
+    text-align: center;
+
+}
