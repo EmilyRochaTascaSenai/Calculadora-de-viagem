@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Combustivel</title>
+    <link rel="stylesheet" href="./sytle.css">
+</head>
+<body>
+    <main>  
+    <h1>Calculadora de Viagem</h1>
+<form action="javascript:calcular()" class="container-form-calculo">
+        <label for="preco-etanol" class="formt-label">Preço do Etanol (R$/L):</label>
+        <input type="number" id="preco-etanol" name="preco-etanol" required step="0.01">
+
+        <label for="preco-gasolina" class="formt-label">Preço da Gasolina (R$/L):</label>
+        <input type="number" id="preco-gasolina" name="preco-gasolina" required step="0.01">
+
+        <label for="combustivel" class="formt-label">Combustível do Carro:</label>
+        
+        <select id="combustivel" name="combustivel" required>
+            <option value="Etanol">Etanol</option>
+            <option value="Gasolina">Gasolina</option>
+        </select>
+
+        <label for="gasto-medio" class="formt-label">Gasto Médio (KM/L):</label>
+        <input type="number" id="gasto-medio" name="gasto-medio" required step="0.01">
+
+        <label for="distancia" class="formt-label">Distância da Viagem (KM):</label>
+        <input type="number" id="distancia" name="distancia" required>
+        <div class="button">
+            <button type="submit">Calcular</button>
+            <button type="button" onclick="limpar()">Limpar</button>
+        </div>
+    </form>
+
+    <div id="resultado"></div>
+</main>
+    <script src="calculadora.js"></script>  
+</body>
+</html>
